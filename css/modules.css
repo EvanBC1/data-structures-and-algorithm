@@ -1,0 +1,89 @@
+@media(min-width: 768px){
+  #a {
+    width: 960px;
+    height: 100px;
+    line-height: 100px; 
+  }
+  
+  #b {
+    width: 200px;
+    height: 600px;
+    line-height: 600px; 
+  }
+  
+  #c, #d {
+    width: 380px;
+    height: 200px;
+    line-height: 200px; 
+  }
+  
+  #e, #f, #g, #h {
+    width: 190px;
+    height: 250px;
+    line-height: 250px; 
+  }
+  
+  #i {
+    width: 760px;
+    height: 150px;
+    line-height: 150px;  
+  }
+}
+@media(min-width: 480px) and (max-width: 767px) {
+#a {
+  height: 75px;
+  line-height: 75px; 
+  animation: colorchange 50s;
+  
+}
+
+#b {
+  height: 150px;
+  line-height: 150px; 
+}
+
+#c, #d {
+  height: 125px;
+  line-height: 125px; 
+}
+
+#e, #f, #g, #h {
+  height: 250px;
+  line-height: 250px;
+  width: 240px; 
+}
+
+#i {
+  height: 80px;
+  line-height: 80px; 
+}
+}
+
+/* Courtesey of:
+UI with rotating color scheme
+A PEN BY Vincent De Oliveira */
+
+.cell {
+    color: hsl(324, 70%, 45%);
+    animation: wheelHueColor 100s infinite;
+    background-color: currentColor;
+}
+@supports (background-blend-mode: overlay) {
+    .cell {
+        background-image: linear-gradient(45deg, white 10%, black 90%);
+        background-blend-mode: overlay;
+    }
+}
+
+@keyframes wheelHueColor {
+  from, to { color: hsl(324, 70%, 45%); }
+  10%      { color: hsl(360, 65%, 45%); }
+  20%      { color: hsl( 36, 80%, 45%); }
+  30%      { color: hsl( 72, 75%, 35%); }
+  40%      { color: hsl(108, 65%, 35%); }
+  50%      { color: hsl(144, 75%, 35%); }
+  60%      { color: hsl(180, 75%, 35%); }
+  70%      { color: hsl(216, 60%, 45%); }
+  80%      { color: hsl(252, 65%, 50%); }
+  90%      { color: hsl(288, 60%, 40%); }
+}
